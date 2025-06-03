@@ -4,13 +4,6 @@ set.seed(42)
 rm(list=ls())
 
 
-
-# -------------------------------
-
-# Geração dos dados
-
-# -------------------------------
-
 n <- 2
 
 N1 <- 50
@@ -45,12 +38,6 @@ points(xc2[,1], xc2[,2], col='red', pch=16)
 
 
 
-# -------------------------------
-
-# Função para calcular margem
-
-# -------------------------------
-
 
 
 calc_margin_braga <- function(w, X_aug, Y) {
@@ -66,11 +53,7 @@ calc_margin_braga <- function(w, X_aug, Y) {
 }
 
   
-  # -------------------------------
 
-# Algoritmo Perceptron 
-
-# -------------------------------
 
 max_iter <- 1000
 
@@ -115,11 +98,6 @@ margem_neg <- margins[[3]][margins[[1]]]
 margem_pos <- margins[[3]][margins[[2]]]
 
 
-# -------------------------------
-
-# Visualização
-
-# -------------------------------
 
 plot(xc1[,1], xc1[,2], col='blue', xlim=c(0,5), ylim=c(0,5), pch=16)
 
@@ -132,9 +110,7 @@ points(xc2[,1], xc2[,2], col='red', pch=16)
 abline(a = -w[1]/w[3], b = -w[2]/w[3], col = 'black', lwd = 2)
 
 
-# -------------------------------
-# Múltiplas execuções do Perceptron
-# -------------------------------
+
 
 num_runs <- 100
 best_margin <- 0
